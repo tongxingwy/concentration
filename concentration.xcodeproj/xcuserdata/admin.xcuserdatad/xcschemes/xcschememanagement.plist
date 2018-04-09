@@ -4,10 +4,43 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>WatchKit App (Notification).xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>WatchKit App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>concentration.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>840B77122074D34E00848E28</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>840B77262074D35300848E28</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>840B77312074D35400848E28</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>840B774C2075E47100848E28</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

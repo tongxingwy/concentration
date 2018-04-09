@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14109" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch42" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14031"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group width="1" height="43" alignment="left" layout="vertical" id="db1-QA-4pZ">
+                            <items>
+                                <label width="1" height="47" alignment="left" text="Flip Count:" textAlignment="center" id="vjR-Ln-MAd">
+                                    <color key="textColor" red="0.98039215686274506" green="0.066666666666666666" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="system" pointSize="28"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group width="1" height="78" alignment="left" id="x9O-I1-GU3">
+                            <items>
+                                <button width="33" height="63" alignment="left" title="-" id="Iq2-sg-fTk">
+                                    <color key="titleColor" red="0.33761582690000003" green="0.99528425929999997" blue="0.51526289780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="font" type="system" pointSize="32"/>
+                                    <connections>
+                                        <action selector="minusAction" destination="AgC-eL-Hgc" id="gl0-6E-06l"/>
+                                    </connections>
+                                </button>
+                                <label width="64" height="58" alignment="left" text="0" textAlignment="center" id="eXA-hE-v2y">
+                                    <color key="textColor" red="0.33761582691394632" green="0.99528425931930542" blue="0.5152628978312862" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="font" type="system" pointSize="38"/>
+                                </label>
+                                <button width="33" height="63" alignment="left" title="+" id="Bz1-BC-Efv">
+                                    <color key="titleColor" red="0.33761582690000003" green="0.99528425929999997" blue="0.51526289780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="font" type="system" pointSize="32"/>
+                                    <connections>
+                                        <action selector="plusAction" destination="AgC-eL-Hgc" id="JL1-dB-mYq"/>
+                                    </connections>
+                                </button>
+                            </items>
+                            <edgeInsets key="margins" left="10" right="22" top="0.0" bottom="0.0"/>
+                        </group>
+                        <group width="1" height="43" alignment="left" id="Oct-CC-DU1">
+                            <items>
+                                <button width="76" height="36" alignment="left" title="Fetch" id="IMV-r2-7bh">
+                                    <connections>
+                                        <action selector="fetchAction" destination="AgC-eL-Hgc" id="tid-tA-V7N"/>
+                                    </connections>
+                                </button>
+                                <button width="76" height="36" alignment="left" title="Ping" id="cDq-7Q-pK9">
+                                    <connections>
+                                        <action selector="pingAction" destination="AgC-eL-Hgc" id="QUt-wJ-Mpm"/>
+                                    </connections>
+                                </button>
+                            </items>
+                            <edgeInsets key="margins" left="0.0" right="0.0" top="6" bottom="0.0"/>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="flipCountLabel" destination="eXA-hE-v2y" id="EtT-ka-sdG"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="219.69230769230771" y="344.79487179487182"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="WatchKit_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="643"/>
+        </scene>
+    </scenes>
+</document>
